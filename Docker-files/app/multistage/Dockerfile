@@ -9,7 +9,7 @@ RUN git clone https://github.com/devopshydclub/vprofile-project.git
 
 # Change working directory to the cloned repository and build the Maven project
 WORKDIR /vprofile-project
-RUN git checkout docker && mvn install
+RUN git checkout docker && mvn clean install
 
 # Switch to the final stage with Tomcat
 FROM tomcat:9-jre11
